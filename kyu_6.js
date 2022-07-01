@@ -19,3 +19,23 @@ function findOutlier(integers){
 
 findOutlier([2, 4, 0, 100, 4, 11, 2602, 36])
 findOutlier([160, 3, 1719, 19, 11, 13, -21])
+
+/* Split Strings
+Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+Examples:
+
+* 'abc' =>  ['ab', 'c_']
+* 'abcdef' => ['ab', 'cd', 'ef']*/
+
+function solution(str){
+   array = str.split("")
+  newArray = []
+  for(let i=0; i< array.length; i+=2){
+    newArray.push(array[i+1]?array[i]+array[i+1]:array[i]+"_")
+  }
+  return newArray
+}
+
+solution('abc')
+solution('abcdef')
